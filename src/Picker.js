@@ -103,20 +103,18 @@ class Picker extends Component {
         transparent
         onRequestClose={toggleShowOptions}
       >
-        <TouchableWithoutFeedback onPress={toggleShowOptions} accessible={false}>
-          <View style={this.styles.pickerCloseAreaContainer}>
-            <SlideUpAnimation visible={showPicker}>
-              <PickerHeader
-                done={done}
-                toggleShowOptions={toggleShowOptions}
-                doneStyle={doneStyle}
-                testProperty={testProperty}
-              />
+        <View style={this.styles.pickerCloseAreaContainer}>
+          <SlideUpAnimation visible={showPicker}>
+            <PickerHeader
+              done={done}
+              toggleShowOptions={toggleShowOptions}
+              doneStyle={doneStyle}
+              testProperty={testProperty}
+            />
 
-              {this.renderPicker()}
-            </SlideUpAnimation>
-          </View>
-        </TouchableWithoutFeedback>
+            {this.renderPicker()}
+          </SlideUpAnimation>
+        </View>
       </Modal>
     );
   }
